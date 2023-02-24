@@ -1,0 +1,7 @@
+<div class="folder">
+  <span class="folder-name">{{ folder.name }}</span>
+  <button (click)="onAddFolder()">Add Folder</button>
+  <div class="sub-folders">
+    <app-folder *ngFor="let subFolder of folder.subFolders" [folder]="subFolder" (addFolder)="folder.subFolders.push($event)"></app-folder>
+  </div>
+</div>

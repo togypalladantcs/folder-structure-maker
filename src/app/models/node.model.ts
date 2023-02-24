@@ -2,5 +2,5 @@ export class NodeModel {
     type: 'folder' | 'file' | 'unset' | null | undefined;
     name?: string;
     children?: NodeModel[];
-    id: string | undefined;
+    id: string | number | undefined ;
 }

@@ -5,8 +5,9 @@
 </head>
 <body>
 
-  <button>Add folder to root</button>
-
-
+<app-folder></app-folder>
+<div class="folder-structure">
+  <app-folder [folder]="folderStructure" (addFolder)="onAddFolder($event)"></app-folder>
+</div>
 </body>
 </html>

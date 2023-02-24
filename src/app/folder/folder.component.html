@@ -1,0 +1,17 @@
+<div class="textStyle title">
+  <h1>{{title}}</h1>
+</div>
+<button class="textStyle" (click)="addFolderToRoot()">Add folder to root</button>
+<ul>
+  <ng-container *ngFor="let item of treeData">
+    <li>{{ item.name }}</li>
+    <ul *ngIf="item.children">
+      <ng-container *ngFor="let child of item.children">
+        <li>{{ child.name }}</li>
+      </ng-container>
+    </ul>
+  </ng-container>
+</ul>
+<button (click)="addItem(0, 'New Child')">Add Child to Parent 1</button>
+
+{{dataService |json}}
